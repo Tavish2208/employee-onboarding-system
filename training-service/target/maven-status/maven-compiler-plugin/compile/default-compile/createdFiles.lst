@@ -1,5 +1,12 @@
-com\example\training\controller\TrainingController.class
+com\example\training\endpoint\TrainingEndpoint.class
+com\example\training\endpoint\TrainingEndpoint$CompleteTrainingResponse.class
+com\example\training\config\WebServiceConfig.class
 com\example\training\service\TrainingAppService.class
 com\example\training\entity\Training.class
+com\example\training\endpoint\TrainingEndpoint$CompleteTrainingRequest.class
 com\example\training\TrainingServiceApplication.class
+com\example\training\endpoint\TrainingEndpoint$AssignTrainingResponse.class
 com\example\training\repository\TrainingRepository.class
+com\example\training\endpoint\TrainingEndpoint$AssignTrainingRequest.class
+com\example\training\endpoint\TrainingEndpoint$ByEmployeeRequest.class
+com\example\training\endpoint\TrainingEndpoint$ByEmployeeResponse.class

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/onboarding/ws"
+           xmlns:tns="http://example.com/onboarding/ws"
+           elementFormDefault="qualified">
+
+    <xs:element name="StartOnboardingRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" type="tns:EmployeeDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="StartOnboardingResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employeeId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="UploadAndVerifyDocumentRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="document" type="tns:DocumentDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UploadAndVerifyDocumentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="docId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="AssignTrainingRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="training" type="tns:TrainingDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AssignTrainingResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="assignmentId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CompleteTrainingRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CompleteTrainingResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="status" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="EmployeeDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DocumentDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="employeeId" type="xs:long"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="verified" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TrainingDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="employeeId" type="xs:long"/>
+            <xs:element name="courseName" type="xs:string"/>
+            <xs:element name="completed" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

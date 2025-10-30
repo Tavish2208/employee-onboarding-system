@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/document/ws"
+           xmlns:tns="http://example.com/document/ws"
+           elementFormDefault="qualified">
+
+    <xs:element name="UploadDocumentRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="document" type="tns:documentDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UploadDocumentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="document" type="tns:documentEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="VerifyDocumentRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="VerifyDocumentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="document" type="tns:documentEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocumentRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetDocumentResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="document" type="tns:documentEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ByEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ByEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="document" type="tns:documentEntity" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="documentDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="employeeId" type="xs:long"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="verified" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="documentEntity">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="employeeId" type="xs:long"/>
+            <xs:element name="type" type="xs:string"/>
+            <xs:element name="location" type="xs:string"/>
+            <xs:element name="verified" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="uploadedAt" type="xs:string" minOccurs="0"/>
+            <xs:element name="verifiedAt" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

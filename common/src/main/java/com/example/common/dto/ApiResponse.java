@@ -1,11 +1,19 @@
 package com.example.common.dto;
 
+import java.io.Serializable;
 import java.time.Instant;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
 
-public class ApiResponse<T> {
+@XmlRootElement(name = "ApiResponse")
+public class ApiResponse<T> implements Serializable {
+    @XmlElement
     private boolean success;
+    @XmlElement
     private String message;
+    @XmlElement
     private T data;
+    @XmlElement
     private Instant timestamp = Instant.now();
 
     public ApiResponse() {}

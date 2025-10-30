@@ -1,5 +1,10 @@
+com\example\notification\entity\Notification.class
+com\example\notification\endpoint\NotificationEndpoint$ByEmployeeRequest.class
+com\example\notification\service\NotificationAppService.class
+com\example\notification\endpoint\NotificationEndpoint.class
 com\example\notification\NotificationServiceApplication.class
 com\example\notification\repository\NotificationRepository.class
-com\example\notification\entity\Notification.class
-com\example\notification\controller\NotificationController.class
-com\example\notification\service\NotificationAppService.class
+com\example\notification\endpoint\NotificationEndpoint$SendNotificationRequest.class
+com\example\notification\endpoint\NotificationEndpoint$SendNotificationResponse.class
+com\example\notification\config\WebServiceConfig.class
+com\example\notification\endpoint\NotificationEndpoint$ByEmployeeResponse.class

@@ -1,5 +1,7 @@
-C:\Users\tharu\Employee Onboarding System\employee-onboarding-system\training-service\src\main\java\com\example\training\repository\TrainingRepository.java
-C:\Users\tharu\Employee Onboarding System\employee-onboarding-system\training-service\src\main\java\com\example\training\controller\TrainingController.java
-C:\Users\tharu\Employee Onboarding System\employee-onboarding-system\training-service\src\main\java\com\example\training\entity\Training.java
-C:\Users\tharu\Employee Onboarding System\employee-onboarding-system\training-service\src\main\java\com\example\training\service\TrainingAppService.java
-C:\Users\tharu\Employee Onboarding System\employee-onboarding-system\training-service\src\main\java\com\example\training\TrainingServiceApplication.java
+D:\employee-onboarding-system\training-service\src\main\java\com\example\training\config\WebServiceConfig.java
+D:\employee-onboarding-system\training-service\src\main\java\com\example\training\entity\Training.java
+D:\employee-onboarding-system\training-service\src\main\java\com\example\training\controller\TrainingController.java
+D:\employee-onboarding-system\training-service\src\main\java\com\example\training\TrainingServiceApplication.java
+D:\employee-onboarding-system\training-service\src\main\java\com\example\training\endpoint\TrainingEndpoint.java
+D:\employee-onboarding-system\training-service\src\main\java\com\example\training\repository\TrainingRepository.java
+D:\employee-onboarding-system\training-service\src\main\java\com\example\training\service\TrainingAppService.java

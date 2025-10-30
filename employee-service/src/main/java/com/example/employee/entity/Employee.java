@@ -1,11 +1,14 @@
 package com.example.employee.entity;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.time.Instant;
 
+@XmlRootElement(name = "EmployeeEntity")
 @Entity
 @Table(name = "employees")
-public class Employee {
+public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

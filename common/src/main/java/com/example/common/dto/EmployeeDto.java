@@ -2,8 +2,12 @@ package com.example.common.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import java.io.Serializable;
 
-public class EmployeeDto {
+@XmlRootElement(name = "Employee")
+public class EmployeeDto implements Serializable {
     private Long id;
 
     @NotBlank

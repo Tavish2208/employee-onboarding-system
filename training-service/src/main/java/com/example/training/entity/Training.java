@@ -1,11 +1,14 @@
 package com.example.training.entity;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.time.Instant;
 
+@XmlRootElement(name = "TrainingEntity")
 @Entity
 @Table(name = "trainings")
-public class Training {
+public class Training implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

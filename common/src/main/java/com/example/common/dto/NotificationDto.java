@@ -2,8 +2,12 @@ package com.example.common.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import java.io.Serializable;
 
-public class NotificationDto {
+@XmlRootElement(name = "Notification")
+public class NotificationDto implements Serializable {
     private Long id;
 
     @NotNull

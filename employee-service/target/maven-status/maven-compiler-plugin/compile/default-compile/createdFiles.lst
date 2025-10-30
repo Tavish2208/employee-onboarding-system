@@ -1,6 +1,15 @@
-com\example\employee\controller\EmployeeController.class
+com\example\employee\endpoint\EmployeeEndpoint$UpdateEmployeeResponse.class
+com\example\employee\endpoint\EmployeeEndpoint.class
 com\example\employee\EmployeeServiceApplication.class
+com\example\employee\endpoint\EmployeeEndpoint$GetEmployeeResponse.class
 com\example\employee\exception\GlobalExceptionHandler.class
-com\example\employee\repository\EmployeeRepository.class
 com\example\employee\service\EmployeeService.class
+com\example\employee\endpoint\EmployeeEndpoint$DeleteEmployeeRequest.class
 com\example\employee\entity\Employee.class
+com\example\employee\endpoint\EmployeeEndpoint$GetEmployeeRequest.class
+com\example\employee\endpoint\EmployeeEndpoint$DeleteEmployeeResponse.class
+com\example\employee\endpoint\EmployeeEndpoint$CreateEmployeeResponse.class
+com\example\employee\config\WebServiceConfig.class
+com\example\employee\repository\EmployeeRepository.class
+com\example\employee\endpoint\EmployeeEndpoint$CreateEmployeeRequest.class
+com\example\employee\endpoint\EmployeeEndpoint$UpdateEmployeeRequest.class

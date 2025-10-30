@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/employee/ws"
+           xmlns:tns="http://example.com/employee/ws"
+           elementFormDefault="qualified">
+
+    <xs:element name="CreateEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" type="tns:employeeDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CreateEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" type="tns:employeeEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" type="tns:employeeEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UpdateEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+                <xs:element name="employee" type="tns:employeeDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="UpdateEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="employee" type="tns:employeeEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DeleteEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="result" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="employeeDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+            <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="employeeEntity">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+            <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+            <xs:element name="email" type="xs:string" minOccurs="0"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+            <xs:element name="createdAt" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

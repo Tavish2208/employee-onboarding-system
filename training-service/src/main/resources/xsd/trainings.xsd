@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/training/ws"
+           xmlns:tns="http://example.com/training/ws"
+           elementFormDefault="qualified">
+
+    <xs:element name="AssignTrainingRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="training" type="tns:trainingDto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AssignTrainingResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="training" type="tns:trainingEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ByEmployeeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ByEmployeeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="training" type="tns:trainingEntity" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CompleteTrainingRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="empId" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="CompleteTrainingResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="training" type="tns:trainingEntity"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="trainingDto">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="employeeId" type="xs:long"/>
+            <xs:element name="courseName" type="xs:string"/>
+            <xs:element name="completed" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="trainingEntity">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" minOccurs="0"/>
+            <xs:element name="employeeId" type="xs:long"/>
+            <xs:element name="courseName" type="xs:string"/>
+            <xs:element name="completed" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="assignedAt" type="xs:string" minOccurs="0"/>
+            <xs:element name="completedAt" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

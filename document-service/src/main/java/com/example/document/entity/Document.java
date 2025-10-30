@@ -1,11 +1,14 @@
 package com.example.document.entity;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 import java.time.Instant;
 
+@XmlRootElement(name = "DocumentEntity")
 @Entity
 @Table(name = "documents")
-public class Document {
+public class Document implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
